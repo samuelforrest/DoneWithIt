@@ -7,7 +7,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
 
   // Remove this before we release the Application
-  console.log("App Executed! Success, Sam");
+  console.log("App Executed! Success, Sam!");
 
   return (
     <View style={styles.container}>
