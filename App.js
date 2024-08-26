@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, Image, TouchableWithoutFeedback, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, Image,
+  TouchableHighlight, TouchableWithoutFeedback, View, SafeAreaView } from 'react-native';
 
 
 // View -> UIView
@@ -20,7 +21,7 @@ export default function App() {
       <StatusBar style="auto" />
       
       <Image source={require("./assets/favicon.png")}></Image>
-      <TouchableWithoutFeedback onPress={() => console.log("Image Tapped!")}>
+      <TouchableHighlight onPress={() => console.log("Image Tapped!")}>
 
       <Image blurRadius={3}
         fadeDuration={1000}
@@ -29,7 +30,7 @@ export default function App() {
         height: 200,
         uri: "https://picsum.photos/200/200"}}></Image>
 
-      </TouchableWithoutFeedback>
+      </TouchableHighlight>
     
     </SafeAreaView>
   );
