@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, Image,
+import { StyleSheet, Text, Alert, Image, Button,
   TouchableHighlight, TouchableWithoutFeedback, View, SafeAreaView } from 'react-native';
 
 
@@ -17,6 +17,36 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
+
+      <Button 
+      color="orange"
+      title="Click Me" 
+      onPress={() => console.log("Button tapped!")}/>
+
+      <Button
+      color="pink"
+      title="Alert Button"
+      onPress={() => alert("Button Tapped!")}/>
+
+      <Button
+        color="red"
+        title="Cooler Alert Button"
+        onPress={() =>
+          Alert.alert("My title", "My message", [
+            { text: "Yes", onPress: () => console.log("Yes") },
+            { text: "No", onPress:() => console.log("No") },
+          ])
+        }
+      />
+
+      <Button
+        color="red"
+        title="Most Cool Alert Button"
+        onPress={() =>
+          Alert.prompt("My title", "My message", text => console.log(text))
+        }
+      />
+
       <Text numberOfLines={1} onPress={handlePress}>Welcome to Sam's React Native Application</Text>
       <StatusBar style="auto" />
       
@@ -37,6 +67,7 @@ export default function App() {
 
 }
 
+const containerStyle = { backgroundColor: "orange" };
 
 const styles = StyleSheet.create({
   container: {
