@@ -16,7 +16,8 @@ export default function App() {
   console.log("App Executed! Success, Sam!");
 
   return (
-    <SafeAreaView style={styles.container}>
+    // The object on the right (containerStyle) will override the properties of the styles on the left
+    <SafeAreaView style={[styles.container, containerStyle]}>
 
       <Button 
       color="orange"
