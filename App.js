@@ -1,74 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, Alert, Image, Button,
-  TouchableHighlight, TouchableWithoutFeedback, View, SafeAreaView } from 'react-native';
+import { StyleSheet,
+  Text,
+  Alert,
+  Image,
+  Button,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  View,
+  Dimensions, 
+  SafeAreaView 
+} from 'react-native';
 
 
-// View -> UIView
 
 export default function App() {
 
-
-  console.log(require("./assets/favicon.png"))
-
-  const handlePress = () => console.log("Text pressed!")
-
-  // Remove this before we release the Application
-  console.log("App Executed! Success, Sam!");
+  console.log(Dimensions.get("screen"));
 
   return (
-    // The object on the right (containerStyle) will override the properties of the styles on the left
-    <SafeAreaView style={[styles.container, containerStyle]}>
-
-      <Button 
-      color="orange"
-      title="Click Me" 
-      onPress={() => console.log("Button tapped!")}/>
-
-      <Button
-      color="pink"
-      title="Alert Button"
-      onPress={() => alert("Button Tapped!")}/>
-
-      <Button
-        color="red"
-        title="Cooler Alert Button"
-        onPress={() =>
-          Alert.alert("My title", "My message", [
-            { text: "Yes", onPress: () => console.log("Yes") },
-            { text: "No", onPress:() => console.log("No") },
-          ])
-        }
-      />
-
-      <Button
-        color="red"
-        title="Most Cool Alert Button"
-        onPress={() =>
-          Alert.prompt("My title", "My message", text => console.log(text))
-        }
-      />
-
-      <Text numberOfLines={1} onPress={handlePress}>Welcome to Sam's React Native Application</Text>
-      <StatusBar style="auto" />
-      
-      <Image source={require("./assets/favicon.png")}></Image>
-      <TouchableHighlight onPress={() => console.log("Image Tapped!")}>
-
-      <Image blurRadius={3}
-        fadeDuration={1000}
-        source={{
-        width: 200,
-        height: 200,
-        uri: "https://picsum.photos/200/200"}}></Image>
-
-      </TouchableHighlight>
-    
+    <SafeAreaView style={styles.container}>
+      <View style={{
+        backgroundColor: "dodgerblue",
+        width: "50%",
+        height: 70,
+      }}
+      ></View>
     </SafeAreaView>
-  );
-
+  
+    )
 }
 
-const containerStyle = { backgroundColor: "orange" };
 
 const styles = StyleSheet.create({
   container: {
@@ -76,7 +37,6 @@ const styles = StyleSheet.create({
     flex: 1,
     // Same kinda colours in CSS
     backgroundColor: 'lightskyblue',
-    alignItems: 'center',
-    justifyContent: 'center',
+
   },
 });
