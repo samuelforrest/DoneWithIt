@@ -38,5 +38,8 @@ const styles = StyleSheet.create({
     // Same kinda colours in CSS
     backgroundColor: 'lightskyblue',
 
+    //danger
+
+
   },
 });
