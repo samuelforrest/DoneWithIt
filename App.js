@@ -33,7 +33,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    // The view is flexible, it will grow to fill the entire screen
+    // The view  is flexible, it will grow to fill the entire screen
     flex: 1,
     // Same kinda colours in CSS
     backgroundColor: 'lightskyblue',
