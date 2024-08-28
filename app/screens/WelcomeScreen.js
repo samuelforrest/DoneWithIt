@@ -1,13 +1,22 @@
 import React from "react";
 import { StatusBar } from 'expo-status-bar';
-import { View } from "react-native";
+import { ImageBackground } from "react-native";
 
 function WelcomeScreen(props) {
   return (
-    <div>
-
-    </div>
+    <ImageBackground 
+    style={styles.background}
+    source={require("../assets/background.jpg")}>
+    </ImageBackground>
   );
 }
+
+const styles = Stylesheet.create({
+
+  background: {
+    flex: 1 // The Image background will take up the whole screen.
+  }
+
+})
 
 export default WelcomeScreen;
