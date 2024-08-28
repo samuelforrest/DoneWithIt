@@ -12,20 +12,17 @@ export default function App() {
 
       <View style={{
         backgroundColor: "dodgerblue",
-        width: 100,
-        height: 100,
+        flex: 2, // 2 out of the 4 segments, blue takes half of the container.
       }}></View>
 
       <View style={{
         backgroundColor: "gold",
-        width: 100,
-        height: 100,
+        flex: 1,
       }}></View>
 
       <View style={{
         backgroundColor: "tomato",
-        width: 100,
-        height: 100,
+        flex: 1,
       }}></View>
 
     </View>
