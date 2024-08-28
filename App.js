@@ -8,13 +8,14 @@ export default function App() {
       flex: 1, //This will make the view grow to fill the remaining space.
       flexDirection: "row", // THis will make the containers flex horizontally.
       justifyContent: "center", // Main Axis
-      alignItems: "flex-end", // Secondary Axis
+      alignItems: "center", // Secondary Axis
     }}>
 
       <View style={{
         backgroundColor: "dodgerblue",
         width: 100,
         height: 300,
+        alignSelf: "flex-start", // Align Self is a style that we can apply to an individual item.
       }}></View>
 
       <View style={{
