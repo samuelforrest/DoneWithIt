@@ -7,8 +7,8 @@ export default function App() {
       backgroundColor: "#fff",
       flex: 1, //This will make the view grow to fill the remaining space.
       flexDirection: "row", // THis will make the containers flex horizontally.
-      justifyContent: "center",
-      alignItems: "baseline",
+      justifyContent: "center", // Main Axis
+      alignItems: "flex-end", // Secondary Axis
     }}>
 
       <View style={{
