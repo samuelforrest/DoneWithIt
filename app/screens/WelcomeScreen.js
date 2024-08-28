@@ -1,6 +1,10 @@
 import React from "react";
 import { StatusBar } from 'expo-status-bar';
-import { ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  ImageBackground,
+  Text,
+  } from "react-native";
 
 function WelcomeScreen(props) {
   return (
